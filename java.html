@@ -1,0 +1,947 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      height: 100px;
+    }
+
+    .logoimage {
+      margin-left: 30px;
+      max-width: 180px;
+    }
+
+    .nav-items {
+      font-size: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      margin-right: 0px;
+      margin-left: 750px;
+      height: 100px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      display: inline-block;
+      position: relative;
+    }
+    .nav-items a:hover {
+      text-decoration: underline;
+      font-size: 27px;
+    }
+
+    /* CSS for main body*/
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://bbdniit.ac.in/wp-content/uploads/2020/09/banner-background-without-image-min.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+    }
+    .javalogo {
+        width: 250px;
+    }
+    .heading h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .heading p {
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      margin: 20px;
+      text-align: center;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    
+    .flex{
+      display: flex;
+      flex-direction: row;
+    }
+    .topics {
+      overflow: scroll;
+      width: 250px;
+      height: 735px;
+    }
+    .link{
+      background-color: #6d94a4;
+      color: white;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 200px;
+    }
+    .link:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+    .content {
+      margin-left: 50px;
+      overflow: scroll;
+      height: 750px;
+      width: 1500px;
+    }
+    .content h1 {
+      font-size: 40px;
+    }
+    .content p {
+      font-size: 25px;
+    }
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 4px 80px;
+    }
+
+    .websitename {
+      color: #fff;
+      font-size: 60px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    .instasocial {
+      max-width: 25px;
+    }
+    .linkedinsocial {
+      max-width: 25px;
+    }
+    .twittersocial {
+      max-width: 25px;
+    }
+
+        /* CSS for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #000;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="feeprojecthomepage.html" class="logo"> <img src="C:\Users\dipan\OneDrive\Documents\logowhite.jpg" class="logoimage"></a>
+    <nav class="nav-items">
+      <a href="feeprojecthomepage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Courses</button>
+        <div class="dropdown-content">
+          <a href="coursehtml.html">HTML</a>
+          <a href="coursecss2.html">CSS</a>
+          <a href="coursepython2.html">Python</a>
+          <a href="coursejava.html">JavaScript</a>
+          <a href="coursec.html">C</a>
+          <a href="coursec++.html">C++</a>
+        </div>
+      </div>
+      <a href="#ABOUT">About</a>
+      <a href="loginpageproject.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+        <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" class="javalogo">
+      <h1>
+        JAVASCRIPT
+      </h1>
+      <p>
+        JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.This tutorial will teach you JavaScript from basic to advanced.
+      </p>
+    </div>
+    <div class="flex">
+    <p class="topics">
+      <a href=#introduction class="link"> Java Introduction</a><br>
+      <a href=#whereto class="link">Java Where To</a><br>
+      <a href=#output class="link">Java Outputs</a><br>
+      <a href=#statements class="link">Java Statements</a><br>
+      <a href=#comments class="link">Java Comments</a><br>
+      <a href=#Variables class="link">Java Variables</a><br>
+      <a href=#let class="link">Java Let</a><br>
+      <a href=#const class="link">Java Const</a><br>
+      <a href=#operators class="link">Java Operators</a><br>
+      <a href=#arithmetic class="link">Java Arithmetic</a><br>
+      <a href=#assignment class="link">Java Assignment</a><br>
+      <a href=#datatypes class="link">Java Data Types</a><br>
+      <a href=#strings class="link">Java Strings</a><br>
+      <a href=#arrays class="link">Java Arrays</a><br>
+      <a href=#dateobjects class="link">Java Date Objects</a><br>
+      <a href=#math class="link">Java Math</a><br>
+      <a href=#ifelse class="link">Java If Else</a>
+    </p>
+    <div class="content">
+      <h1 id="introduction">Javascript Introduction</h1>
+      <p>JavaScript is the world's most popular programming language.<br>
+        JavaScript is the programming language of the Web.<br>
+        JavaScript is easy to learn.<br>
+        This tutorial will teach you JavaScript from basic to advanced.</p>
+        <p><b>Use the Menu</b><br>
+          We recommend reading this tutorial, in the sequence listed in the menu.<br>
+          If you have a large screen, the menu will always be present on the left.<br>
+          If you have a small screen, open the menu by clicking the top menu sign ☰.</p>
+          <p><b>Learn by Examples</b><br>
+            Examples are better than 1000 words. Examples are often easier to understand than text explanations.<br>
+            This tutorial supplements all explanations with clarifying "Try it Yourself" examples.</p>
+            <p><b>Why Study JavaScript?</b><br>
+              JavaScript is one of the 3 languages all web developers must learn:<br>
+                 1. HTML to define the content of web pages<br>
+                 2. CSS to specify the layout of web pages<br>
+                 3. JavaScript to program the behavior of web pages</p>
+                 <p><b>JavaScript Can Change HTML Content</b><br>
+                  One of many JavaScript HTML methods is getElementById().<br>
+                  The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+                  <h2>document.getElementById("demo").innerHTML = "Hello JavaScript";</h2>
+                  <p><b>JavaScript Can Change HTML Attribute Values</b><br>
+                    In this example JavaScript changes the value of the src (source) attribute of an < img > tag:</p>
+                    <h2></h2>
+                    <p><b>JavaScript Can Change HTML Styles (CSS)</b><br>
+                      Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+                      <h2>document.getElementById("demo").style.fontSize = "35px";</h2>
+                      <p><b>JavaScript Can Hide HTML Elements</b><br>
+                        Hiding HTML elements can be done by changing the display style:</p>
+                        <h2>document.getElementById("demo").style.display = "none";</h2>
+                        <p><b>JavaScript Can Show HTML Elements</b><br>
+                          Showing hidden HTML elements can also be done by changing the display style:</p>
+                          <h2>document.getElementById("demo").style.display = "block";</h2>
+                           <h1 id="whereto">Javascript Where To</h1>
+                          <p><b>The > script > Tag </b><br>
+                            In HTML, JavaScript code is inserted between > script > and > /script > tags.</p>
+                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-28 235040.png">
+                            <p><b>JavaScript Functions and Events</b><br>
+                              A JavaScript function is a block of JavaScript code, that can be executed when "called" for.
+                              For example, a function can be called when an event occurs, like when the user clicks a button.</p>
+                              <p><b>JavaScript in < head > or < body ></b><br>
+                                You can place any number of scripts in an HTML document.<br>
+                                Scripts can be placed in the < body >, or in the < head > section of an HTML page, or in both.</p>
+                                <p><b>JavaScript in < head ></b><br>
+                                  In this example, a JavaScript function is placed in the < head > section of an HTML page.<br>
+                                  The function is invoked (called) when a button is clicked:</p>
+                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 000041.png">
+                                  <p><b>JavaScript in < body ></b><br>
+                                    In this example, a JavaScript function is placed in the < body > section of an HTML page.<br>
+                                    The function is invoked (called) when a button is clicked:</p>
+                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 000149.png">
+                                    <p><b>External JavaScript</b><br>
+                                      Scripts can also be placed in external files:</p>
+                                      <h2>function myFunction() {<br>
+                                        document.getElementById("demo").innerHTML = "Paragraph changed.";<br>
+                                      }</h2>
+                                      <p>External scripts are practical when the same code is used in many different web pages.<br>
+                                        JavaScript files have the file extension .js.<br>
+                                        To use an external script, put the name of the script file in the src (source) attribute of a > script > tag:</p>
+                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 001207.png">
+                                        <p>You can place an external script reference in < head > or < body > as you like.<br>
+                                          The script will behave as if it was located exactly where the > script > tag is located.</p>
+                                          <p><b>External JavaScript Advantages</b><br>
+                                            Placing scripts in external files has some advantages:<br>
+                                            It separates HTML and code<br>
+                                            It makes HTML and JavaScript easier to read and maintain<br>
+                                            Cached JavaScript files can speed up page loads<br>
+                                            To add several script files to one page  - use several script tags:</p>
+                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 001706.png">
+                                            <h1 id="output">Javascript Output</h1>
+                                            <p>JavaScript Display Possibilities<br>
+                                              JavaScript can "display" data in different ways:<br>
+                                              Writing into an HTML element, using innerHTML.<br>
+                                              Writing into the HTML output using document.write().<br>
+                                              Writing into an alert box, using window.alert().<br>
+                                              Writing into the browser console, using console.log().</p>
+                                              <p><b>Using innerHTML</b><br>
+                                                To access an HTML element, JavaScript can use the document.getElementById(id) method.<br>
+                                                The id attribute defines the HTML element. The innerHTML property defines the HTML content:</p>
+                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 001901.png">
+                                                <p><b>Using document.write()</b><br>
+                                                  For testing purposes, it is convenient to use document.write():</p>
+                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002053.png">
+                                                  <p><b>Using window.alert()</b><br>
+                                                    You can use an alert box to display data:</p>
+                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002206.png">
+                                                    <p>You can skip the window keyword.<br>
+                                                      In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object.<br>
+                                                      This also means that specifying the window keyword is optional:</p>
+                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002311.png">
+                                                      <p><b>>Using console.log()</b><br>
+                                                        For debugging purposes, you can call the console.log() method in the browser to display data.</p>
+                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002419.png">
+                                                        <p><b>JavaScript Print</b><br>
+                                                          JavaScript does not have any print object or print methods.<br>
+                                                          You cannot access output devices from JavaScript.<br>
+                                                          The only exception is that you can call the window.print() method in the browser to print the content of the current window.</p>
+                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002545.png">
+                                                          <h1 id="statements">Javascript Statements</h1>
+                                                          <p><b>Examples</b></p>
+                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 002716.png">
+                                                          <p><b>JavaScript Programs</b><br>
+                                                            A computer program is a list of "instructions" to be "executed" by a computer.<br>
+                                                            In a programming language, these programming instructions are called statements.<br>
+                                                            A JavaScript program is a list of programming statements.</p>
+                                                            <p><b>JavaScript Statements</b><br>
+                                                              JavaScript statements are composed of:<br>
+                                                              Values, Operators, Expressions, Keywords, and Comments.<br>
+                                                              This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":</p>
+                                                              <h2>document.getElementById("demo").innerHTML = "Hello Dolly.";</h2>
+                                                              <p><b>Semicolons ;</b><br>
+                                                                Semicolons separate JavaScript statements.<br>
+                                                                Add a semicolon at the end of each executable statement:</p>
+                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 003005.png">
+                                                                <p><b>JavaScript White Space</b><br>
+                                                                  JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.<br>
+                                                                  The following lines are equivalent:</p>
+                                                                  <h2>let person = "Hege";<br>
+                                                                    let person="Hege";</h2>
+                                                                    <p><b>JavaScript Line Length and Line Breaks</b><br>
+                                                                      For best readability, programmers often like to avoid code lines longer than 80 characters.<br>
+                                                                      If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</p>
+                                                                      <p><b>Examples</b></p>
+                                                                      <h2>document.getElementById("demo").innerHTML =<br>
+                                                                        "Hello Dolly!";</h2>
+                                                                        <p><b>JavaScript Code Blocks</b><br>
+                                                                          JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.<br>
+                                                                          The purpose of code blocks is to define statements to be executed together.<br>
+                                                                          One place you will find statements grouped together in blocks, is in JavaScript functions:</p>
+                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 003323.png">
+                                                                          <p><b>JavaScript Keywords</b><br>
+                                                                            JavaScript statements often start with a keyword to identify the JavaScript action to be performed.<br>
+                                                                            Our Reserved Words Reference lists all JavaScript keywords.<br>
+                                                                            Here is a list of some of the keywords you will learn about in this tutorial:</p>
+                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 003509.png">
+                                                                            <h1 id="syntax">Javascript Syntax</h1>
+                                                                            <p><b>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</b></p>
+                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 003736.png">
+                                                                             <p><b>JavaScript Values</b><br>
+                                                                              The JavaScript syntax defines two types of values:<br>
+                                                                              Fixed values<br>
+                                                                              Variable values<br>
+                                                                              Fixed values are called Literals.<br>
+                                                                              Variable values are called Variables.</p>
+                                                                              <p><b>JavaScript Literals</b>
+                                                                                The two most important syntax rules for fixed values are:<br>
+                                                                                1. Numbers are written with or without decimals:</p>
+                                                                                <h2>10.50<br>
+                                                                                  1001</h2>
+                                                                                  <p>2. Strings are text, written within double or single quotes:</p>
+                                                                                  <h2>"John Doe"<br>
+                                                                                    'John Doe'</h2>
+                                                                                    <p><b>JavaScript Variables</b><br>
+                                                                                      In a programming language, variables are used to store data values.<br>
+                                                                                      JavaScript uses the keywords var, let and const to declare variables.<br>
+                                                                                      An equal sign is used to assign values to variables.<br>
+                                                                                      In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
+                                                                                      <h2>let x;<br>
+                                                                                        x = 6;</h2>
+                                                                                        <p><b>JavaScript Operators</b><br>
+                                                                                          JavaScript uses arithmetic operators ( + - * / ) to compute values:</p>
+                                                                                          <h2>(5 + 6) * 10</h2>
+                                                                                          <p><b>JavaScript Expressions</b><br>
+                                                                                            An expression is a combination of values, variables, and operators, which computes to a value.<br>
+                                                                                            The computation is called an evaluation.<br>
+                                                                                            For example, 5 * 10 evaluates to 50:</p>
+                                                                                            <h2>5 * 10</h2>
+                                                                                            <p><b>JavaScript Keywords</b><br>
+                                                                                              JavaScript keywords are used to identify actions to be performed.<br>
+                                                                                              The let keyword tells the browser to create variables:</p>
+                                                                                              <h2>let x, y;<br>
+                                                                                                x = 5 + 6;<br>
+                                                                                                y = x * 10;</h2>
+                                                                                                <p><b>JavaScript Comments</b><br>
+                                                                                                  Not all JavaScript statements are "executed".<br>
+                                                                                                  Code after double slashes // or between /* and */ is treated as a comment.<br>
+                                                                                                  Comments are ignored, and will not be executed:</p>
+                                                                                                  <h2>let x = 5;   // I will be executed<br>
+                                                                                                    // x = 6;   I will NOT be executed</h2>
+                                                                                                    <p><b>JavaScript Identifiers / Names</b><br>
+                                                                                                      Identifiers are JavaScript names.<br>
+                                                                                                      Identifiers are used to name variables and keywords, and functions.<br>
+                                                                                                      The rules for legal names are the same in most programming languages.<br>
+                                                                                                      A JavaScript name must begin with:<br>
+                                                                                                      A letter (A-Z or a-z)<br>
+                                                                                                      A dollar sign ($)<br>
+                                                                                                      Or an underscore (_)<br>
+                                                                                                      Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
+                                                                                                      <p><b>JavaScript is Case Sensitive</b><br>
+                                                                                                        All JavaScript identifiers are case sensitive.<br>
+                                                                                                        The variables lastName and lastname, are two different variables:</p>
+                                                                                                        <h2>let lastname, lastName;<br>
+                                                                                                          lastName = "Doe";<br>
+                                                                                                          lastname = "Peterson";</h2>
+                                                                                                          <h1 id="comments">Javascript Comments</h1>
+                                                                                                          <p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.<br>
+                                                                                                            JavaScript comments can also be used to prevent execution, when testing alternative code.</p>
+                                                                                                            <p><b>Single Line Comments</b>
+                                                                                                              Single line comments start with //.<br>
+                                                                                                              Any text between // and the end of the line will be ignored by JavaScript (will not be executed).<br>
+                                                                                                              This example uses a single-line comment before each code line:</p>
+                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 010505.png">
+                                                                                                              <p><b>Multi-line Comments</b><br>
+                                                                                                                Multi-line comments start with /* and end with */.<br>
+                                                                                                                Any text between /* and */ will be ignored by JavaScript.<br>
+                                                                                                                This example uses a multi-line comment (a comment block) to explain the code:</p>
+                                                                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 010744.png">
+                                                                                                                <p><b>Using Comments to Prevent Execution</b><br>
+                                                                                                                  Using comments to prevent execution of code is suitable for code testing.<br>
+                                                                                                                  Adding // in front of a code line changes the code lines from an executable line to a comment.<br>
+                                                                                                                  This example uses // to prevent execution of one of the code lines:</p>
+                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 010938.png">
+                                                                                                                  <h1 id="Variables">Javascript Variables</h1>
+                                                                                                                  <p><b>Variables are Containers for Storing Data</b><br>
+                                                                                                                    JavaScript Variables can be declared in 4 ways:<br>
+                                                                                                                    Automatically<br>
+                                                                                                                    Using var<br>
+                                                                                                                    Using let<br>
+                                                                                                                    Using const</p>
+                                                                                                                    <h2>x = 5;<br>
+                                                                                                                      y = 6;<br>
+                                                                                                                      z = x + y;</h2>
+                                                                                                                      <P>From the examples you can guess:<br>
+                                                                                                                        x stores the value 5<br>
+                                                                                                                        y stores the value 6<br>
+                                                                                                                        z stores the value 11</P>
+                                                                                                                        <p><b>Examples using var</b></p>
+                                                                                                                        <h2>var x = 5;<br>
+                                                                                                                          var y = 6;<br>
+                                                                                                                          var z = x + y;</h2>
+                                                                                                                          <P><b>JavaScript Identifiers</b><br>
+                                                                                                                            All JavaScript variables must be identified with unique names.<br>
+                                                                                                                            These unique names are called identifiers.<br>
+                                                                                                                            Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).<br>
+                                                                                                                            The general rules for constructing names for variables (unique identifiers) are:<br>
+                                                                                                                            Names can contain letters, digits, underscores, and dollar signs.<br>
+                                                                                                                            Names must begin with a letter.<br>
+                                                                                                                            Names can also begin with $ and _ (but we will not use it in this tutorial).<br>
+                                                                                                                            Names are case sensitive (y and Y are different variables).<br>
+                                                                                                                            Reserved words (like JavaScript keywords) cannot be used as names.</P>
+                                                                                                                            <p><b>The Assignment Operator</b><br>
+                                                                                                                              In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.<br>
+                                                                                                                              This is different from algebra. The following does not make sense in algebra:</p>
+                                                                                                                              <h2>x = x + 5</h2>
+                                                                                                                              <p><b>JavaScript Data Types</b><br>
+                                                                                                                                JavaScript variables can hold numbers like 100 and text values like "John Doe".<br>
+                                                                                                                                In programming, text values are called text strings.<br>
+                                                                                                                                JavaScript can handle many types of data, but for now, just think of numbers and strings.<br>
+                                                                                                                                Strings are written inside double or single quotes. Numbers are written without quotes.<br>
+                                                                                                                                If you put a number in quotes, it will be treated as a text string.</p>
+                                                                                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 011636.png">
+                                                                                                                                <p><b>One Statement, Many Variables</b><br>
+                                                                                                                                  You can declare many variables in one statement.<br>
+                                                                                                                                  Start the statement with let and separate the variables by comma:</p>
+                                                                                                                                  <h2>let person = "John Doe", carName = "Volvo", price = 200;</h2>
+                                                                                                                                  <h1 id="let">JavaScript Let</h1>
+                                                                                                                                  <p>The let keyword was introduced in ES6 (2015)<br>
+                                                                                                                                    Variables declared with let have <b>Block Scope</b><br>
+                                                                                                                                    Variables declared with let must be <b>Declared</b> before use<br>
+                                                                                                                                    Variables declared with let cannot be <b>>Redeclared</b> in the same scope</p>
+                                                                                                                                    <P><b>Block Scope</b><br>
+                                                                                                                                      Before ES6 (2015), JavaScript did not have <b>Block Scope</b>.<br>
+                                                                                                                                      JavaScript had <b>Global Scope</b> and <b>Function Scope</b>.<br>
+                                                                                                                                      ES6 introduced the two new JavaScript keywords: let and const.<br>
+                                                                                                                                      These two keywords provideed <b>Block Scope</b> in JavaScript:</P>
+                                                                                                                                      <p><b>Example</b><br>
+                                                                                                                                        Variables declared inside a { } block cannot be accessed from outside the block:</p>
+                                                                                                                                        <h2>{<br>
+                                                                                                                                          let x = 2;<br>
+                                                                                                                                        }<br>
+                                                                                                                                        // x can NOT be used here</h2>
+                                                                                                                                        <p><b>Global Scope</b><br>
+                                                                                                                                          Variables declared with the var always have Global Scope.<br>
+                                                                                                                                          Variables declared with the var keyword can NOT have block scope:</p>
+                                                                                                                                          <p><b>Example</b><br>
+                                                                                                                                            Variables declared with varinside a { } block can be accessed from outside the block:</p>
+                                                                                                                                            <h2>{<br>
+                                                                                                                                              var x = 2;<br>
+                                                                                                                                            }<br>
+                                                                                                                                            // x CAN be used here</h2>
+                                                                                                                                            <p><b>Cannot be Redeclared</b><br>
+                                                                                                                                              Variables defined with let can not be redeclared.<br>
+                                                                                                                                              You can not accidentally redeclare a variable declared with let.</p>
+                                                                                                                                              <h2>let x = "John Doe";<br>
+                                                                                                                                                let x = 0;</h2>
+                                                                                                                                                <p><b>Redeclaring Variables</b><br>
+                                                                                                                                                  Redeclaring a variable using the var keyword can impose problems.<br>
+                                                                                                                                                  Redeclaring a variable inside a block will also redeclare the variable outside the block:</p>
+                                                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 022247.png">
+                                                                                                                                                  <h1 id="const">JavaScript Const</h1>
+                                                                                                                                                  <p>The const keyword was introduced in ES6 (2015)
+                                                                                                                                                    Variables defined with const cannot be <b>Redeclared</b>
+                                                                                                                                                    Variables defined with const cannot be <b>Reassigned</b>
+                                                                                                                                                    Variables defined with const have <b>Block Scope</b></p>
+                                                                                                                                                    <p><b>Cannot be Reassigned</b><br>
+                                                                                                                                                      A const variable cannot be reassigned:</p>
+                                                                                                                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 022748.png">
+                                                                                                                                                      <p><b>Must be Assigned</b><br>
+                                                                                                                                                        JavaScript const variables must be assigned a value when they are declared:</p>
+                                                                                                                                                        <h2>const PI = 3.14159265359;</h2>
+                                                                                                                                                        <p><b>Constant Objects and Arrays</b><br>
+                                                                                                                                                          The keyword const is a little misleading.<br>
+                                                                                                                                                          It does not define a constant value. It defines a constant reference to a value.<br>
+                                                                                                                                                          Because of this you can NOT:<br>
+                                                                                                                                                          Reassign a constant value<br>
+                                                                                                                                                          Reassign a constant array<br>
+                                                                                                                                                          Reassign a constant object<br>
+                                                                                                                                                          But you CAN:<br>
+                                                                                                                                                          Change the elements of constant array<br>
+                                                                                                                                                          Change the properties of constant object<br>
+                                                                                                                                                          </p>
+                                                                                                                                                          <p><b>Constant Arrays</b><br>
+                                                                                                                                                            You can change the elements of a constant array:</p>
+                                                                                                                                                            <p><b>Examples</b></p>
+                                                                                                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 023208.png">
+                                                                                                                                                            <h1 id="operators">Javascript Operators</h1>
+                                                                                                                                                            <p>The <b>Addition Operator</b> + adds numbers:
+                                                                                                                                                              The <b>Assignment Operator</b> = assigns a value to a variable.</p>
+                                                                                                                                                              <p><b>JavaScript Assignment</b><br>
+                                                                                                                                                                The Assignment Operator (=) assigns a value to a variable:</p>
+                                                                                                                                                                <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 023935.png">
+                                                                                                                                                                <p><b>JavaScript Addition</b><br>
+                                                                                                                                                                  The Addition Operator (+) adds numbers:</p>
+                                                                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 024030.png">
+                                                                                                                                                                  <p><b>JavaScript Multiplication</b><br>
+                                                                                                                                                                    The Multiplication Operator (*) multiplies numbers:</p>
+                                                                                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 024117.png">
+                                                                                                                                                                    <P><b>Types of JavaScript Operators</b><br>
+                                                                                                                                                                      There are different types of JavaScript operators:<br>
+                                                                                                                                                                      Arithmetic Operators<br>
+                                                                                                                                                                      Assignment Operators<br>
+                                                                                                                                                                      Comparison Operators<br>
+                                                                                                                                                                      String Operators<br>
+                                                                                                                                                                      Logical Operators<br>
+                                                                                                                                                                      Bitwise Operators<br>
+                                                                                                                                                                      Ternary Operators<br>
+                                                                                                                                                                      Type Operators</P>
+                                                                                                                                                                      <p><b>JavaScript Arithmetic Operators</b><br>
+                                                                                                                                                                        Arithmetic Operators are used to perform arithmetic on numbers:</p>
+                                                                                                                                                                        <h2>let a = 3;<br>
+                                                                                                                                                                          let x = (100 + 50) * a;</h2>
+                                                                                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 024536.png">
+                                                                                                                                                                          <h1 id="arithmetic">Javascript arithmetic</h1>
+                                                                                                                                                                          <p><b>JavaScript Arithmetic Operators</b><br>
+                                                                                                                                                                            Arithmetic operators perform arithmetic on numbers (literals or variables).</p>
+                                                                                                                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 024747.png">
+                                                                                                                                                                            <p><b>Arithmetic Operations</b><br>
+                                                                                                                                                                              A typical arithmetic operation operates on two numbers.<br>
+                                                                                                                                                                              The two numbers can be literals:</p>
+                                                                                                                                                                              <h2>let x = 100 + 50;</h2>
+                                                                                                                                                                              <p><b>Operators and Operands</b><br>
+                                                                                                                                                                                The numbers (in an arithmetic operation) are called operands.<br>
+                                                                                                                                                                                The operation (to be performed between the two operands) is defined by an operator.</p>
+                                                                                                                                                                                <p><b>Adding</b><br>
+                                                                                                                                                                                  The addition operator (+) adds numbers:</p>
+                                                                                                                                                                                  <h2>let x = 5;<br>
+                                                                                                                                                                                  let y = 2;<br>
+                                                                                                                                                                                  let z = x + y;</h2>
+                                                                                                                                                                                  <p><b>Subtracting</b><br>
+                                                                                                                                                                                    The subtraction operator (-) subtracts numbers.</p>
+                                                                                                                                                                                    <h2>let x = 5;<br>
+                                                                                                                                                                                      let y = 2;<br>
+                                                                                                                                                                                      let z = x - y;</h2>
+                                                                                                                                                                                      <P><b>Multiplying</b><br>
+                                                                                                                                                                                        The multiplication operator (*) multiplies numbers.</P>
+                                                                                                                                                                                        <h2>let x = 5;<br>
+                                                                                                                                                                                          let y = 2;<br>
+                                                                                                                                                                                          let z = x * y;</h2>
+                                                                                                                                                                                          <p><b>Dividing</b><br>
+                                                                                                                                                                                            The division operator (/) divides numbers.</p>
+                                                                                                                                                                                            <h2>let x = 5;<br>
+                                                                                                                                                                                              let y = 2;<br>
+                                                                                                                                                                                              let z = x / y;</h2>
+                                                                                                                                                                                              <p><b>Remainder</b><br>
+                                                                                                                                                                                                The modulus operator (%) returns the division remainder.</p>
+                                                                                                                                                                                                <h2>let x = 5;<br>
+                                                                                                                                                                                                  let y = 2;<br>
+                                                                                                                                                                                                  let z = x % y;</h2>
+                                                                                                                                                                                                  <h1 id="assignment">Javascript Assignment</h1>
+                                                                                                                                                                                                  <p><b>JavaScript Assignment Operators</b><br>
+                                                                                                                                                                                                    Assignment operators assign values to JavaScript variables.</p>
+                                                                                                                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 031422.png">
+                                                                                                                                                                                                    <p><b>Shift Assignment Operators</b></p>
+                                                                                                                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 031458.png">
+                                                                                                                                                                                                    <p><b>Bitwise Assignment Operators</b></p>
+                                                                                                                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 031556.png">
+                                                                                                                                                                                                    <p><b>Logical Assignment Operators</b></p>
+                                                                                                                                                                                                    <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 031556.png">
+                                                                                                                                                                                                    <h1 id="datatypes">JavaScript Data Types</h1>
+                                                                                                                                                                                                    <p><b>JavaScript has 8 Datatypes</b><br>
+                                                                                                                                                                                                      1. String<br>
+                                                                                                                                                                                                      2. Number<br>
+                                                                                                                                                                                                      3. Bigint<br>
+                                                                                                                                                                                                      4. Boolean<br>
+                                                                                                                                                                                                      5. Undefined<br>
+                                                                                                                                                                                                      6. Null<br>
+                                                                                                                                                                                                      7. Symbol<br>
+                                                                                                                                                                                                      8. Object</p>
+                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                      <b>The Object Datatype</b>
+                                                                                                                                                                                                      The object data type can contain:<br>
+                                                                                                                                                                                                      1. An object<br>
+                                                                                                                                                                                                      2. An array<br>
+                                                                                                                                                                                                      3. A date</p>
+                                                                                                                                                                                                      <P><b>Examples</b></P>
+                                                                                                                                                                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 031858.png">
+                                                                                                                                                                                                      <P><b>JavaScript Strings</b><br>
+                                                                                                                                                                                                        A string (or a text string) is a series of characters like "John Doe".<br>
+                                                                                                                                                                                                        Strings are written with quotes. You can use single or double quotes:</P>
+                                                                                                                                                                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 032037.png">
+                                                                                                                                                                                                        <p><b>JavaScript Numbers</b><br>
+                                                                                                                                                                                                          All JavaScript numbers are stored as decimal numbers (floating point).<br>
+                                                                                                                                                                                                          Numbers can be written with, or without decimals:</p>
+                                                                                                                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 032137.png">
+                                                                                                                                                                                                          <P><b>JavaScript BigInt</b><br>
+                                                                                                                                                                                                            All JavaScript numbers are stored in a a 64-bit floating-point format.<br>
+                                                                                                                                                                                                            JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.</P>
+                                                                                                                                                                                                            <p><b>JavaScript Booleans</b><br>
+                                                                                                                                                                                                              Booleans can only have two values: true or false.</p>
+                                                                                                                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-11-29 032538.png">
+                                                                                                                                                                                                              <p><b>JavaScript Arrays</b><br>
+                                                                                                                                                                                                                JavaScript arrays are written with square brackets.<br>
+                                                                                                                                                                                                                Array items are separated by commas.<br>
+                                                                                                                                                                                                                The following code declares (creates) an array called cars, containing three items (car names):</p>
+                                                                                                                                                                                                                <h2>const cars = ["Saab", "Volvo", "BMW"];</h2>
+                                                                                                                                                                                                                <h1>Javascript Function</h1>
+                                                                                                                                                                                                                <p>A JavaScript function is a block of code designed to perform a particular task.<br>
+                                                                                                                                                                                                                  A JavaScript function is executed when "something" invokes it (calls it).</p>
+                                                                                                                                                                                                                  <p><b>Examples</b></p>
+                                                                                                                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 193939.png">
+                                                                                                                                                                                                                  <p><b>JavaScript Function Syntax</b><br>
+                                                                                                                                                                                                                    A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
+                                                                                                                                                                                                                    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).<br>
+                                                                                                                                                                                                                    The parentheses may include parameter names separated by commas:<br>
+                                                                                                                                                                                                                    (parameter1, parameter2, ...)<br>
+                                                                                                                                                                                                                    The code to be executed, by the function, is placed inside curly brackets: {}</p>
+                                                                                                                                                                                                                    <h2>function name(parameter1, parameter2, parameter3) {<br>
+                                                                                                                                                                                                                      // code to be executed<br>
+                                                                                                                                                                                                                    }</h2>
+                                                                                                                                                                                                                    <p>Function parameters are listed inside the parentheses () in the function definition.<br>
+                                                                                                                                                                                                                      Function arguments are the values received by the function when it is invoked.<br>
+                                                                                                                                                                                                                      Inside the function, the arguments (the parameters) behave as local variables.<br>
+                                                                                                                                                                                                                      </p>
+                                                                                                                                                                                                                      <p><b>Function Invocation</b><br>
+                                                                                                                                                                                                                        The code inside the function will execute when "something" invokes (calls) the function:<br>
+                                                                                                                                                                                                                        When an event occurs (when a user clicks a button)<br>
+                                                                                                                                                                                                                        When it is invoked (called) from JavaScript code<br>
+                                                                                                                                                                                                                        Automatically (self invoked)<br>
+                                                                                                                                                                                                                        You will learn a lot more about function invocation later in this tutorial.</p>
+                                                                                                                                                                                                                        <p><b>Function Return</b><br>
+                                                                                                                                                                                                                          When JavaScript reaches a return statement, the function will stop executing.<br>
+                                                                                                                                                                                                                          If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.<br>
+                                                                                                                                                                                                                          Functions often compute a return value. The return value is "returned" back to the "caller":</p>
+                                                                                                                                                                                                                          <p><b>Examples</b><br>
+                                                                                                                                                                                                                          Calculate the product of two numbers, and return the result:</p>
+                                                                                                                                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 194447.png">
+                                                                                                                                                                                                                          <p><b>The () Operator</b><br>
+                                                                                                                                                                                                                            The () operator invokes (calls) the function:</p>
+                                                                                                                                                                                                                            <p><b>Example</b><br>
+                                                                                                                                                                                                                              Convert Fahrenheit to Celsius:</p>
+                                                                                                                                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 194606.png">
+                                                                                                                                                                                                                              <p>Accessing a function with incorrect parameters can return an incorrect answer:</p>
+                                                                                                                                                                                                                              <p><b>examples</b></p>
+                                                                                                                                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 194733.png">
+                                                                                                                                                                                                                              <p>Accessing a function without () returns the function and not the function result:</p>
+                                                                                                                                                                                                                              <p>Examples</p>
+                                                                                                                                                                                                                              <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 194849.png">
+                                                                                                                                                                                                                              <h1 id="strings">Javascript Strings</h1>
+                                                                                                                                                                                                                              <p>JavaScript strings are for storing and manipulating text.<br>
+                                                                                                                                                                                                                                A JavaScript string is zero or more characters written inside quotes.</p>
+                                                                                                                                                                                                                                <p><b>Examples</b></p>
+                                                                                                                                                                                                                                <h2>Let text = "John Doe";</h2>
+                                                                                                                                                                                                                                <p>You can use single or double quotes:</p>
+                                                                                                                                                                                                                                <p><b>Examples</b></p>
+                                                                                                                                                                                                                                <h2>let carName1 = "Volvo XC60";  // Double quotes<br>
+                                                                                                                                                                                                                                  let carName2 = 'Volvo XC60';  // Single quotes</h2>
+                                                                                                                                                                                                                                  <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+                                                                                                                                                                                                                                  <p><b>Examples</b></p>
+                                                                                                                                                                                                                                  <h2>let answer1 = "It's alright";<br>
+                                                                                                                                                                                                                                    let answer2 = "He is called 'Johnny'";<br>
+                                                                                                                                                                                                                                    let answer3 = 'He is called "Johnny"';</h2>
+                                                                                                                                                                                                                                    <p><b>String Length</b><br>
+                                                                                                                                                                                                                                      To find the length of a string, use the built-in length property:</p>
+                                                                                                                                                                                                                                      <p><b>Examples</b></p>
+                                                                                                                                                                                                                                      <h2>let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+                                                                                                                                                                                                                                        let length = text.length;</h2>
+                                                                                                                                                                                                                                        <p><b>Escape Character</b><br>
+                                                                                                                                                                                                                                          Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+                                                                                                                                                                                                                                          <h2>let text = "We are the so-called "Vikings" from the north.";</h2>
+                                                                                                                                                                                                                                          <p>The string will be chopped to "We are the so-called ".<br>
+                                                                                                                                                                                                                                            The solution to avoid this problem, is to use the backslash escape character.<br>
+                                                                                                                                                                                                                                            The backslash (\) escape character turns special characters into string characters:</p>
+                                                                                                                                                                                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 201846.png">
+                                                                                                                                                                                                                                            <p>The sequence \"  inserts a double quote in a string:</p>
+                                                                                                                                                                                                                                            <p><b>Examples</b></p>
+                                                                                                                                                                                                                                            <h2>let text = "We are the so-called \"Vikings\" from the north.";</h2>
+                                                                                                                                                                                                                                            <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 202435.png">
+                                                                                                                                                                                                                                            <h1 id="arrays">Javascript Arrays</h1>
+                                                                                                                                                                                                                                            <p>An array is a special variable, which can hold more than one value:</p>
+                                                                                                                                                                                                                                            <h2>const cars = ["Saab", "Volvo", "BMW"];</h2>
+                                                                                                                                                                                                                                            <p><b>Why Use Arrays?</b><br>
+                                                                                                                                                                                                                                              If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+                                                                                                                                                                                                                                              <h2>let car1 = "Saab";<br>
+                                                                                                                                                                                                                                                let car2 = "Volvo";<br>
+                                                                                                                                                                                                                                                let car3 = "BMW";</h2>
+                                                                                                                                                                                                                                                <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?<br>
+                                                                                                                                                                                                                                                  The solution is an array!<br>
+                                                                                                                                                                                                                                                  An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+                                                                                                                                                                                                                                                  <p><b>Creating an Array</b><br>
+                                                                                                                                                                                                                                                    Using an array literal is the easiest way to create a JavaScript Array.<br>
+                                                                                                                                                                                                                                                    Syntax:</p>
+                                                                                                                                                                                                                                                    <h2>const array_name = [item1, item2, ...];</h2>
+                                                                                                                                                                                                                                                    <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                    <h2>const cars = ["Saab", "Volvo", "BMW"];</h2>
+                                                                                                                                                                                                                                                    <p><b>Accessing Array Elements</b><br>
+                                                                                                                                                                                                                                                      You access an array element by referring to the index number:</p>
+                                                                                                                                                                                                                                                      <h2>const cars = ["Saab", "Volvo", "BMW"];<br>
+                                                                                                                                                                                                                                                        let car = cars[0];</h2>
+                                                                                                                                                                                                                                                        <p><b>Changing an Array Element</b><br>
+                                                                                                                                                                                                                                                          This statement changes the value of the first element in cars:</p>
+                                                                                                                                                                                                                                                          <h2>cars[0] = "Opel";</h2>
+                                                                                                                                                                                                                                                          <P><b>Examples</b></P>
+                                                                                                                                                                                                                                                          <h2>const cars = ["Saab", "Volvo", "BMW"];
+                                                                                                                                                                                                                                                            cars[0] = "Opel";</h2>
+                                                                                                                                                                                                                                                            <p><b>Converting an Array to a String</b><br>
+                                                                                                                                                                                                                                                              The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+                                                                                                                                                                                                                                                              <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                              <h2>const fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+                                                                                                                                                                                                                                                                document.getElementById("demo").innerHTML = fruits.toString();</h2>
+                                                                                                                                                                                                                                                                <p><b>Result</b></p>
+                                                                                                                                                                                                                                                                <h2>Banana,Orange,Apple,Mango</h2>
+                                                                                                                                                                                                                                                                <p><b>Access the Full Array</b><br>
+                                                                                                                                                                                                                                                                  With JavaScript, the full array can be accessed by referring to the array name:</p>
+                                                                                                                                                                                                                                                                  <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                  <h2>const cars = ["Saab", "Volvo", "BMW"];<br>
+                                                                                                                                                                                                                                                                    <p><b>Arrays are Objects</b><br>
+                                                                                                                                                                                                                                                                      Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.<br>
+                                                                                                                                                                                                                                                                      But, JavaScript arrays are best described as arrays.<br>
+                                                                                                                                                                                                                                                                      Arrays use numbers to access its "elements". In this example, person[0] returns John:</p>
+                                                                                                                                                                                                                                                                      <p><b>Array:</b></p>
+                                                                                                                                                                                                                                                                      <h2>const person = ["John", "Doe", 46];</h2>        
+                                                                                                                                                                                                                                                                      <p><b>Objects:</b></p>
+                                                                                                                                                                                                                                                                      <h2>const person = {firstName:"John", lastName:"Doe", age:46};</h2>     
+                                                                                                                                                                                                                                                                      <p><b>Array Elements Can Be Objects</b><br>
+                                                                                                                                                                                                                                                                        JavaScript variables can be objects. Arrays are special kinds of objects.<br>
+                                                                                                                                                                                                                                                                        Because of this, you can have variables of different types in the same Array.<br>
+                                                                                                                                                                                                                                                                        You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>  
+                                                                                                                                                                                                                                                                        <h2>myArray[0] = Date.now;<br>
+                                                                                                                                                                                                                                                                          myArray[1] = myFunction;<br>
+                                                                                                                                                                                                                                                                          myArray[2] = myCars;</h2>      
+                                                                                                                                                                                                                                                                          <P><b>Array Properties and Methods</b><br>
+                                                                                                                                                                                                                                                                            The real strength of JavaScript arrays are the built-in array properties and methods:</P>      
+                                                                                                                                                                                                                                                                            <h2>cars.length   // Returns the number of elements<br>
+                                                                                                                                                                                                                                                                              cars.sort()   // Sorts the array<br>
+                                                                                                                                                                                                                                                                              </h2>
+                                                                                                                                                                                                                                                                              <P><b>The length Property</b><br>
+                                                                                                                                                                                                                                                                                The length property of an array returns the length of an array (the number of array elements).</P>
+                                                                                                                                                                                                                                                                                <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                <h2>const fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+                                                                                                                                                                                                                                                                                  let length = fruits.length;</h2>
+                                                                                                                                                                                                                                                                                  <h1 id="dateobjects">JavaScript Date Objects</h1>
+                                                                                                                                                                                                                                                                                  <p>JavaScript Date Objects let us work with dates:<br>
+                                                                                                                                                                                                                                                                                    Tue Dec 05 2023 22:03:48 GMT+0530 (India Standard Time)</p>
+                                                                                                                                                                                                                                                                                    <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                    <h2>const d = new Date();</h2>
+                                                                                                                                                                                                                                                                                    <h2>const d = new Date("2022-03-25");</h2>
+                                                                                                                                                                                                                                                                                    <p><b>JavaScript Date Output
+                                                                                                                                                                                                                                                                                      By default, JavaScript will use the browser's time zone and display a date as a full text string:
+                                                                                                                                                                                                                                                                                      Tue Dec 05 2023 22:03:48 GMT+0530 (India Standard Time)</p>
+                                                                                                                                                                                                                                                                                      <P><b>Creating Date Objects</b><br>
+                                                                                                                                                                                                                                                                                        Date objects are created with the new Date() constructor.<br>
+                                                                                                                                                                                                                                                                                        There are 9 ways to create a new date object:</P>
+                                                                                                                                                                                                                                                                                        <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 221018.png">
+                                                                                                                                                                                                                                                                                        <p><b>JavaScript new Date()</b><br>
+                                                                                                                                                                                                                                                                                          new Date() creates a date object with the current date and time:</p>
+                                                                                                                                                                                                                                                                                          <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                          <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 221018.png">
+                                                                                                                                                                                                                                                                                          <p><b>new Date(date string)</b><br>
+                                                                                                                                                                                                                                                                                            new Date(date string) creates a date object from a date string:</p>
+                                                                                                                                                                                                                                                                                            <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                            <h2>const d = new Date("October 13, 2014 11:13:00");<br>
+                                                                                                                                                                                                                                                                                              const d = new Date("2022-03-25");
+                                                                                                                                                                                                                                                                                            </h2>
+                                                                                                                                                                                                                                                                                            <p><b>new Date(year, month, ...)</b><br>
+                                                                                                                                                                                                                                                                                              new Date(year, month, ...) creates a date object with a specified date and time.<br>
+                                                                                                                                                                                                                                                                                              7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</p>
+                                                                                                                                                                                                                                                                                              <h2>const d = new Date(2018, 11, 24, 10, 33, 30, 0);</h2>
+                                                                                                                                                                                                                                                                                              <h1 id="math">JavaScript Math Object</h1>
+                                                                                                                                                                                                                                                                                              <p>The JavaScript Math object allows you to perform mathematical tasks on numbers.</p>
+                                                                                                                                                                                                                                                                                              <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                              <h2>Math.PI;</h2>
+                                                                                                                                                                                                                                                                                              <P><b>The Math Object</b><br>
+                                                                                                                                                                                                                                                                                                Unlike other objects, the Math object has no constructor.<br>
+                                                                                                                                                                                                                                                                                                The Math object is static.<br>
+                                                                                                                                                                                                                                                                                                All methods and properties can be used without creating a Math object first.</P>
+                                                                                                                                                                                                                                                                                                <p><b>Math Properties (Constants)</b><br>
+                                                                                                                                                                                                                                                                                                  The syntax for any Math property is : Math.property.<br>
+                                                                                                                                                                                                                                                                                                  JavaScript provides 8 mathematical constants that can be accessed as Math properties:</p>
+                                                                                                                                                                                                                                                                                                  <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                                  <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 222119.png">
+                                                                                                                                                                                                                                                                                                  <p><b>Math Methods</b><br>
+                                                                                                                                                                                                                                                                                                    The syntax for Math any methods is : Math.method(number)</p>
+                                                                                                                                                                                                                                                                                                    <p><b>Number to Integer</b><br>
+                                                                                                                                                                                                                                                                                                      There are 4 common methods to round a number to an integer:</p>
+                                                                                                                                                                                                                                                                                                      <img src="C:\Users\dipan\OneDrive\Pictures\Screenshots\Screenshot 2023-12-05 222323.png">
+                                                                                                                                                                                                                                                                                                      <p><b>Math.round()</b><br>
+                                                                                                                                                                                                                                                                                                        Math.round(x) returns the nearest integer:</p>
+                                                                                                                                                                                                                                                                                                        <p><b>Examples</b></p>
+                                                                                                                                                                                                                                                                                                        <h2>Math.round(4.6);<br>
+                                                                                                                                                                                                                                                                                                          Math.round(4.5);<br>
+                                                                                                                                                                                                                                                                                                        </h2>
+                                                                                                                                                                                                                                                                                                        <h1 id="ifelse">JavaScript if, else, and else if</h1>
+                                                                                                                                                                                                                                                                                                        <p>Conditional statements are used to perform different actions based on different conditions.</p>
+                                                                                                                                                                                                                                                                                                        <p><b>Conditional Statements</b><br>
+                                                                                                                                                                                                                                                                                                          Very often when you write code, you want to perform different actions for different decisions.<br>
+                                                                                                                                                                                                                                                                                                          You can use conditional statements in your code to do this.<br>
+                                                                                                                                                                                                                                                                                                          In JavaScript we have the following conditional statements:<br>
+                                                                                                                                                                                                                                                                                                          Use if to specify a block of code to be executed, if a specified condition is true<br>
+                                                                                                                                                                                                                                                                                                          Use else to specify a block of code to be executed, if the same condition is false<br>
+                                                                                                                                                                                                                                                                                                          Use else if to specify a new condition to test, if the first condition is false<br>
+                                                                                                                                                                                                                                                                                                          Use switch to specify many alternative blocks of code to be executed</p>
+                                                                                                                                                                                                                                                                                                          <p><b>The if Statement</b><br>
+                                                                                                                                                                                                                                                                                                            Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+                                                                                                                                                                                                                                                                                                            <p><b>Syntax</b></p>
+                                                                                                                                                                                                                                                                                                            <h2>if (condition) {
+                                                                                                                                                                                                                                                                                                              //  block of code to be executed if the condition is true
+                                                                                                                                                                                                                                                                                                            }</h2>
+                                                                                                                                                                                                                                                                                                            <p><b>Example</b><br>
+                                                                                                                                                                                                                                                                                                              Make a "Good day" greeting if the hour is less than 18:00:</p>
+                                                                                                                                                                                                                                                                                                              <h2>if (hour < 18) {<br>
+                                                                                                                                                                                                                                                                                                                greeting = "Good day";<br>
+                                                                                                                                                                                                                                                                                                              }</h2>
+                                                                                                                                                                                                                                                                                                              <p><b>The else Statement</b><br>
+                                                                                                                                                                                                                                                                                                                Use the else statement to specify a block of code to be executed if the condition is false.</p>
+                                                                                                                                                                                                                                                                                                                <h2>if (condition) {<br>
+                                                                                                                                                                                                                                                                                                                  //  block of code to be executed if the condition is true<br>
+                                                                                                                                                                                                                                                                                                                } else {<br>
+                                                                                                                                                                                                                                                                                                                  //  block of code to be executed if the condition is false<br>
+                                                                                                                                                                                                                                                                                                                }</h2>
+                                                                                                                                                                                                                                                                                                                <P><b>The else if Statement</b><br>
+                                                                                                                                                                                                                                                                                                                  Use the else if statement to specify a new condition if the first condition is false.</P>
+                                                                                                                                                                                                                                                                                                                  <P><b>Syntax</b></P>
+                                                                                                                                                                                                                                                                                                                  <h2>if (condition1) {<br>
+                                                                                                                                                                                                                                                                                                                    //  block of code to be executed if condition1 is true<br>
+                                                                                                                                                                                                                                                                                                                  } else if (condition2) {<br>
+                                                                                                                                                                                                                                                                                                                    //  block of code to be executed if the condition1 is false and condition2 is true<br>
+                                                                                                                                                                                                                                                                                                                  } else {<br>
+                                                                                                                                                                                                                                                                                                                    //  block of code to be executed if the condition1 is false and condition2 is false<br>
+                                                                                                                                                                                                                                                                                                                  }</h2>
+
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                </div>
+  </main>
+  <footer class="footer">
+    <div class="websitename"> Elearnx</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Courses</span>
+        <a href="coursehtml.html" id="ABOUT">Html</a>
+        <a href="coursecss2.html">Css</a>
+        <a href="coursepython2.html">Python</a>
+        <a href="coursejava.html">Javascript</a>
+        <a href="coursec.html">C</a>
+        <a href="coursec++.html">C++</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.instagram.com/heyitsdipanshu/"> <img src="C:\Users\dipan\Downloads\logo-ig-png-32464.png" class="instasocial"> </a>
+        <a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAYFBMVEUAd7X///8Ac7NGlMRGk8QAdrUAbLAAbrDZ7PXV6fPy+fw9ir/p9Pkugbo0hr3D2umz0ORUnMh3q9C72eplocoIe7dsps6dxN6lyeCDs9TL4u+WwNzg7vVTmMYhg7uy1OcLxWtDAAABaklEQVRIie3W7Y6CMBAFUBxohwIK8qEIgu//lltou7TortNu9p83MRGSIzgzlEaHwETyU51jr5wrBWsODDzCgNcLrHjkHV5JOIE/hEnCOATGEiYhMHGgLBELgdi1lxlJ1IH8uvS17CjShtiriRCekM1mlm7oBaE2sCEMhA1vBg5+kCUG9n63GmGqXJYTqmNDlhcrrAkXdPsIx3FI+4TidpPDkHNOm7ndrP6U9TH/5VZxDewPsEvaS5t0CK8h9qXKSd4tq9T3EaC73rOl2EVp/X0bcqcddzMMU7YtbFuHHShsqH+lnJwlsUIqFIW7mLZAhPuYOfaGh5nR4fBotgLVQIWik+PE+11h38NCLUGmV+Ypfw9HdQU0j/lAhfr9AKafggizXHc81/VJibA4qvKzk4HE4nzgB/4jfLU8UiA26RqxQn0wfEOhTjTPMEIdZh9EOsw9QXzpPOdvMHgTGLztDN7oBm+twzfzYfkCChobmnKthiYAAAAASUVORK5CYII=" class="linkedinsocial"> </a>
+        <a href="https://twitter.com/home"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAV1BMVEX///8dofIAmvEAnPH2+/4GnvI0p/O22vq93vre7/3v+P7M5vvW6vwAmPHs9v6m0/mZzfiHxfdzvfbk8v1Bq/NpufUAlfGOyPcAkfBRsPR+wfZdtPTH4/udz3kPAAABLklEQVRIie2U2ZaDIAxAScLiVnHBOm39/++c0toptAZ65nHG+4bmSkwgQuzs/HuqZvyNZjUi0nBzx5qLWpaXB9IReBQaUUxHyYkTNvEDrWCFiI4Fm9f1fZTNTPBEGdmVjIgAaIN16IF2Xx23ow+kU/tY1pEIB9YT7l6I86qaSFSG9YR91HAq5JsIvOers36dyJ3trD4WxyBUUew5XpPYdXFw+IuXVKbEeqDmhNjzHhB/bq4XAXkRq1RxzIHN9JTyfOtoW6RE+2/ITm+bGc9ot72hzYgCtgurc54oNwuL7NAITHgvD6Wa/8S6l/pQ6rRFxCc218IfFh0li0NO8He3qudYU5hthJA9XodgnCVePhrjbR/eXkU4NXlpZekdoYf0YNjJzVCVTdnmw3Z2/jjfQWEJXwOeKIcAAAAASUVORK5CYII=" class="twittersocial"> </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
