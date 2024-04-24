@@ -1,0 +1,547 @@
+~
+~
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      height: 100px;
+    }
+
+    .logoimage {
+      margin-left: 30px;
+      max-width: 180px;
+    }
+
+    .nav-items {
+      font-size: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      margin-right: 0px;
+      margin-left: 750px;
+      height: 100px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      display: inline-block;
+      position: relative;
+    }
+    .nav-items a:hover {
+      text-decoration: underline;
+      font-size: 27px;
+    }
+
+    /* CSS for main body*/
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://bbdniit.ac.in/wp-content/uploads/2020/09/banner-background-without-image-min.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+    }
+    .pythonlogo {
+        width: 120px;
+    }
+    .heading h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .heading p {
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      margin: 20px;
+      text-align: center;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    
+    .flex{
+      display: flex;
+      flex-direction: row;
+    }
+    .topics {
+      overflow: scroll;
+      width: 250px;
+      height: 735px;
+    }
+    .link{
+      background-color: #6d94a4;
+      color: white;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 200px;
+    }
+    .link:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+    .content {
+      margin-left: 50px;
+      overflow: scroll;
+      height: 750px;
+      width: 1500px;
+    }
+    .content h1 {
+      font-size: 40px;
+    }
+    .content p {
+      font-size: 25px;
+    }
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 4px 80px;
+    }
+
+    .websitename {
+      color: #fff;
+      font-size: 60px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    .instasocial {
+      max-width: 25px;
+    }
+    .linkedinsocial {
+      max-width: 25px;
+    }
+    .twittersocial {
+      max-width: 25px;
+    }
+
+        /* CSS for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #000;
+  padding: 35px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="feeprojecthomepage.html" class="logo"> <img src="C:\Users\dipan\OneDrive\Documents\logowhite.jpg" class="logoimage"></a>
+    <nav class="nav-items">
+      <a href="feeprojecthomepage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Courses</button>
+        <div class="dropdown-content">
+          <a href="coursehtml.html">HTML</a>
+          <a href="coursecss2.html">CSS</a>
+          <a href="coursepython2.html">Python</a>
+          <a href="coursejava.html">JavaScript</a>
+          <a href="coursec.html">C</a>
+          <a href="coursec++.html">C++</a>
+        </div>
+      </div>
+      <a href="#ABOUT">About</a>
+      <a href="loginpageproject.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" class="pythonlogo">
+      <h1>
+        PYTHON
+      </h1>
+      <p>
+        Python is a powerful multipurpose programming language created by Guido van Rossum.
+
+It has a simple and easy-to-use syntax, making it a popular first-choice programming language for beginners.
+
+This is a comprehensive guide that explores the reasons you should consider learning Python and the ways you can get started with Python.
+      </p>
+    </div>
+    <div class="flex">
+    <p class="topics">
+      <a href=#introduction class="link">Python Tutorial</a><br>
+      <a href=#variables class="link">Python Variables</a><br>
+      <a href=#datatypes class="link">Python Data Types</a><br>
+      <a href=#numbers class="link">Python Numbers</a><br>
+      <a href=#strings class="link">Python Strings</a><br>
+      <a href=#strings class="link">Python Booleans</a><br>
+      <a href=#strings class="link">Python Operators</a><br>
+      <a href=#strings class="link">Pyhton Lists</a><br>
+      <a href=#strings class="link">pyhton Tuples</a><br>
+      <a href=#strings class="link">pyhton Dictionary</a><br>
+      <a href=#strings class="link">pyhton Sets</a><br>
+      <a href=#strings class="link">Pyhton If Else</a><br>
+      <a href=#strings class="link">Pyhton While Loop</a><br>
+      <a href=#strings class="link">Pyhton For Loop</a><br>
+      <a href=#strings class="link">Pyhton Functions</a><br>
+      <a href=#strings class="link">Pyhton Lambda</a><br>
+      <a href=#strings class="link">Pyhton Arrays</a><br>
+      <a href=#strings class="link">Pyhton Classes/Objects</a>
+    </p>
+    <div class="content">
+      <h1 id="introduction">PYTHON TUTORIAL<br>
+    </h1>
+    <P>Learn Python<BR>
+      Python is a popular programming language.<br>
+      
+      Python can be used on a server to create web applications.<br>
+      <b><p>
+        Learning by Examples</b><br>
+        With our "Try it Yourself" editor, you can edit Python code and view the result.</p>
+        <p><b>EXAMPLES</b></p>
+        <h2>print("Hello, World!")</h2>
+        <p>
+          Python File Handling<br>
+          In our File Handling section you will learn how to open, read, write, and delete files.<br>
+          
+         <b>Python File Handling</b><br>
+          
+         <b>Python Database Handling  </b><br>
+          In our database section you will learn how to access and work with MySQL and MongoDB databases:<br>
+          
+          Python MySQL Tutorial<br>
+          
+          Python MongoDB Tutorial</p>
+          
+          <p><b>What is Python?</b><br>
+            Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.<br>
+            
+            It is used for:<br>
+            
+            web development (server-side),<br>
+            software development,<br>
+            mathematics,<br>
+            system scripting.</p>
+            <p><b>>What can Python do?</b><br>
+              Python can be used on a server to create web applications.<br>
+              Python can be used alongside software to create workflows.<br>
+              Python can connect to database systems. It can also read and modify files.<br>
+              Python can be used to handle big data and perform complex mathematics.<br>
+              Python can be used for rapid prototyping, or for production-ready software development</p><br>
+              <p><b>Why Python?</b><br>
+                Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).<br>
+                Python has a simple syntax similar to the English language.<br>
+                Python has syntax that allows developers to write programs with fewer lines than some other programming languages.<br>
+                Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.<br>
+                Python can be treated in a procedural way, an object-oriented way or a functional way.</p>
+                <p><b>Python Syntax compared to other programming languages</b><br>
+Python was designed for readability, and has some similarities to the English language with influence from mathematics.<br>
+Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.<br>
+Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. <br>Other programming languages often use curly-brackets for this purpose.</p>
+<p><b>Examples</b></p>
+<h2>print("Hello, World!")</h2>
+<h1 id="variables">Python Variables</h1>
+<p>Variables<br>
+  Variables are containers for storing data values.<br><br>
+  
+<b>  Creating Variables</b><br>
+  Python has no command for declaring a variable.<br>
+  
+  A variable is created the moment you first assign a value to it.</p>
+  <p><b>EXAMPLES</b></p>
+  <h2>x = 5<br>
+    y = "John"<br>
+    print(x)<br>
+    print(y)</h2>
+    <p><b>Casting</b><br>
+      If you want to specify the data type of a variable, this can be done with casting.</p>
+      <p>EXAMPLES</p>
+      <h2><br>
+        x = str(3)    # x will be '3'<br>
+        y = int(3)    # y will be 3<br>
+        z = float(3)  # z will be 3.0</h2>
+      <p><b>Single or Double Quotes?</b></p>
+      String variables can be declared either by using single or double quotes:<br>
+      <b>EXAMPLES:</b>
+      <h2>x = "John"
+        # is the same as<br>
+        x = 'John'</h2>
+        <h1 id="datatypes">Python Data Types</h1>
+        <p>
+        <b>Built-in Data Types</b><br>
+        In programming, data type is an important concept.<br>
+        Variables can store data of different types, and different types can do different things.<br>
+
+        Python has the following data types built-in by default, in these categories:<br><br></p>
+        <img src="python1.jpg">
+        <p><b>Getting the Data Type</b><br>
+          You can get the data type of any object by using the type() function:<br>
+          <b>EXAMPLES</b>
+          <h2>x = 5
+            print(type(x))</h2>
+            <P><H1>Setting the Data Type</H1></P><BR>
+              <p>
+              In Python, the data type is set when you assign a value to a variable:</p><br>
+              <P><b>EXAMPLES</b></P>
+              <img src="python2.jpg">
+                <H1 id="numbers">PYTHON NUMBERS </H1>
+                <p><b>Python Numbers</b><br>
+                  There are three numeric types in Python:<br>
+                  
+                 * int<br>
+            
+                 * float<br>
+                 * complex<br>
+                  Variables of numeric types are created when you assign a value to them:</p>
+                  <p>EXAMPLES</p>
+                  <H2>
+                    x = 1    # int<br>
+                    y = 2.8  # float<br>
+                    z = 1j   # complex</H2><br>
+                   <p> To verify the type of any object in Python, use the type() function:<BR>
+                    <b>EXAMPLES</b>
+                    <h2>
+                      print(type(x))
+                      print(type(y))
+                      print(type(z))</h2>
+                      <p><b>Int</b>
+                        Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+                        
+                       <b> Example</b>
+                        Integers:</p>
+                        <h2>x = 1<br>
+                          y = 35656222554887711<br>
+                          z = -3255522<br>
+                          
+                          print(type(x))<br>
+                          print(type(y))<br>
+                          print(type(z))</h2>
+                          <p><b>float</b>
+                          Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+                          <b>EXAMPLES
+                            floats:</b>
+                            <h2>x = 1.10<br>
+                              y = 1.0<br>
+                              z = -35.59<br>
+                              
+                              print(type(x))<br>
+                              print(type(y))<br>
+                              print(type(z))</h2>
+                              <p><B>COMPLEX</B>
+                                Complex numbers are written with a "j" as the imaginary part:
+                                <B>Example
+                                  Complex:</B>
+                                  <H2>x = 3+5j<BR>
+                                    y = 5j<BR>
+                                    z = -5j<BR>
+                                    
+                                    print(type(x))<BR>
+                                    print(type(y))<BR>
+                                    print(type(z))</H2>
+                                    <P><B>Type Conversion</B>
+                                      You can convert from one type to another with the int(), float(), and complex() methods:</P>
+                                      <P><B>EXAMPLES</B></P><br>
+                                        <img src="python3.jpg">
+                                        <h1 id="strings">Python Strings</h1>
+                                        <p><b>Strings</b>
+                                          Strings in python are surrounded by either single quotation marks, or double quotation marks.<br>
+                                          'hello' is the same as "hello".<br>
+                                          You can display a string literal with the print() function:<br></p>
+                                          <p><b>EXAMPLE </b></p>
+                                          <H2>print("Hello")
+                                            print('Hello')</H2><br>
+                                            <P><B>Assign String to a Variable</B><br>
+                                              Assigning a string to a variable is done with the variable name followed by an equal sign and the string:<BR>
+                                              <P><B>EXAMPLE</B></P><BR>
+                                              <H2>a = "Hello"
+                                                print(a)</H2>
+                                                <p><b>>MULTILINE STRING</b>
+                                                You can assign a multiline string to a variable by using three quotes:<br></p>
+                                                <p><b>EXAMPLE</b></p>
+                                                <img src="python4.jpg">
+                                                <p><b>string in  array </b><br>
+
+                                                  Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.<br>
+                                                  However, Python does not have a character data type, a single character is simply a string with a length of 1.<br>
+                                                  Square brackets can be used to access elements of the string.<br></p>
+                                                 <p> <b>EXAMPLE</b></p>
+                                                  <h2>a = "Hello, World!"
+                                                    print(a[1])</h2>
+                                                  </b></p>
+                                                  <h1>Python Lists</h1><br>
+                                                  <p><b>list</b><br>
+                                                    Lists are used to store multiple items in a single variable.<br>
+                                                    Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.<br>
+                                                    Lists are created using square brackets:</p><br>
+                                                    <p><b>Example</b></p><br>
+                                                    creat a list :<br>
+                                                    <h2>thislist = ["apple", "banana", "cherry"],<br>
+                                                      print(thislist)</h2><br>
+                                                      <p><b>list item </b><br>
+                                                        List items are ordered, changeable, and allow duplicate values.<br>
+ 
+                                                         List items are indexed, the first item has index [0], the second item has index [1] etc.<br>
+                                                         <p><b>ordered</b><br>
+                                                          When we say that lists are ordered, it means that the items have a defined order, and that order will not change.<br>
+
+                                                           If you add new items to a list, the new items will be placed at the end of the list.<br>
+                                                           <b>Note:</b> There are some list methods that will change the order, but in general: the order of the items will not change.<br>
+                                                           <p><b>changeable</b></p><br>
+                                                           <p>
+                                                            The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.</p><br>
+                                                            <h1>tupple in list </h1><br>
+                                                            <p><b>EXAMPLE</b></p><br>
+                                                            <img src="python5.jpg"><br>
+                                                            <p><b>Tuple Items - Data Types</b><br>
+                                                            Tuple items can be of any data type:<br>
+                                                            <h2>tuple1 = ("apple", "banana", "cherry")<br>
+                                                              tuple2 = (1, 5, 7, 9, 3)<br>
+                                                              tuple3 = (True, False, False)</h2><br>
+                                                              <p><br>
+                                                             <b>type()</b><br>
+                                                             From Python's perspective, tuples are defined as objects with the data type 'tuple': </p>
+                                                             <p><br>
+                                                             <b> Python Collections (Arrays)</b><br>
+                                                            There are four collection data types in the Python programming language:<br>
+
+                                                             List is a collection which is ordered and changeable. Allows duplicate members.<br>
+                                                             Tuple is a collection which is ordered and unchangeable. Allows duplicate members.<br>
+                                                             Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.<br>
+                                                             Dictionary is a collection which is ordered** and changeable. No duplicate members.</p><br>
+                                                             <p><b>Tuple Methods</b>
+                                                              <br>
+                                                              Python has two built-in methods that you can use on tuples.<br></p>
+                                                              <img src="python6.jpg"><br>
+                                                              <p><b>Python - Tuple Exercises</b><br>
+                                                                Test Yourself With Exercises<br>
+                                                                Now you have learned a lot about tuples, and how to use them in Python.<br>
+                                                                
+                                                                Are you ready for a test?<br>
+                                                                
+                                                                Try to insert the missing part to make the code work as expected:<br>
+                                                                <img src="python7.jpg"><br>
+                                                                <h1>PYTHON SETS</h1><br>
+                                                                <p><b>set</b><br>
+                                                                  Sets are used to store multiple items in a single variable.<br>
+
+                                                                   Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.<br>
+
+                                                                   A set is a collection which is unordered, unchangeable*, and unindexed.<br>
+
+                                                                  <b>* Note:</b> Set items are unchangeable, but you can remove items and add new items.<br>
+
+                                                                    Sets are written with curly brackets.<br>
+                                                                </p>
+    </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="websitename"> Elearnx</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Courses</span>
+        <a href="coursehtml.html" id="ABOUT">Html</a>
+        <a href="coursecss2.html">Css</a>
+        <a href="coursepython2.html">Python</a>
+        <a href="coursejava.html">Javascript</a>
+        <a href="coursec.html">C</a>
+        <a href="coursec++.html">C++</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.instagram.com/heyitsdipanshu/"> <img src="C:\Users\dipan\Downloads\logo-ig-png-32464.png" class="instasocial"> </a>
+        <a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAYFBMVEUAd7X///8Ac7NGlMRGk8QAdrUAbLAAbrDZ7PXV6fPy+fw9ir/p9Pkugbo0hr3D2umz0ORUnMh3q9C72eplocoIe7dsps6dxN6lyeCDs9TL4u+WwNzg7vVTmMYhg7uy1OcLxWtDAAABaklEQVRIie3W7Y6CMBAFUBxohwIK8qEIgu//lltou7TortNu9p83MRGSIzgzlEaHwETyU51jr5wrBWsODDzCgNcLrHjkHV5JOIE/hEnCOATGEiYhMHGgLBELgdi1lxlJ1IH8uvS17CjShtiriRCekM1mlm7oBaE2sCEMhA1vBg5+kCUG9n63GmGqXJYTqmNDlhcrrAkXdPsIx3FI+4TidpPDkHNOm7ndrP6U9TH/5VZxDewPsEvaS5t0CK8h9qXKSd4tq9T3EaC73rOl2EVp/X0bcqcddzMMU7YtbFuHHShsqH+lnJwlsUIqFIW7mLZAhPuYOfaGh5nR4fBotgLVQIWik+PE+11h38NCLUGmV+Ypfw9HdQU0j/lAhfr9AKafggizXHc81/VJibA4qvKzk4HE4nzgB/4jfLU8UiA26RqxQn0wfEOhTjTPMEIdZh9EOsw9QXzpPOdvMHgTGLztDN7oBm+twzfzYfkCChobmnKthiYAAAAASUVORK5CYII=" class="linkedinsocial"> </a>
+        <a href="https://twitter.com/home"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAV1BMVEX///8dofIAmvEAnPH2+/4GnvI0p/O22vq93vre7/3v+P7M5vvW6vwAmPHs9v6m0/mZzfiHxfdzvfbk8v1Bq/NpufUAlfGOyPcAkfBRsPR+wfZdtPTH4/udz3kPAAABLklEQVRIie2U2ZaDIAxAScLiVnHBOm39/++c0toptAZ65nHG+4bmSkwgQuzs/HuqZvyNZjUi0nBzx5qLWpaXB9IReBQaUUxHyYkTNvEDrWCFiI4Fm9f1fZTNTPBEGdmVjIgAaIN16IF2Xx23ow+kU/tY1pEIB9YT7l6I86qaSFSG9YR91HAq5JsIvOers36dyJ3trD4WxyBUUew5XpPYdXFw+IuXVKbEeqDmhNjzHhB/bq4XAXkRq1RxzIHN9JTyfOtoW6RE+2/ITm+bGc9ot72hzYgCtgurc54oNwuL7NAITHgvD6Wa/8S6l/pQ6rRFxCc218IfFh0li0NO8He3qudYU5hthJA9XodgnCVePhrjbR/eXkU4NXlpZekdoYf0YNjJzVCVTdnmw3Z2/jjfQWEJXwOeKIcAAAAASUVORK5CYII=" class="twittersocial"> </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
